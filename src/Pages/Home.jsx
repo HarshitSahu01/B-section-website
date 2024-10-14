@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
 
 export default function Home() {
   return (
     <div>
-      main page content
+      <h1>Welcome to the Main Page</h1>
+      
     </div>
-  )
+  );
 }
