@@ -16,7 +16,7 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col md:flex-row items-start md:items-center gap-2">
-          <a href="#" className="inline-block relative group">
+          <a href="https://www.instagram.com/section_b_rcoem/" className="inline-block relative group">
             <span 
               className="inline-block px-6 py-2 text-black font-bold group-hover:text-yellow-800 transition duration-300 rounded-full bg-yellow-500"
               style={{
