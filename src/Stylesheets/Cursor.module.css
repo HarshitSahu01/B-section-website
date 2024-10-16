@@ -1,0 +1,23 @@
+/* Navbar.module.css */
+
+/* Ensure the mobile drawer covers the entire screen */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50; /* Make sure it's above other content */
+    background-color: rgba(17, 17, 17, 0.95); /* Slight transparency for the backdrop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Ensure the button has higher z-index when the drawer is open */
+  .mobile-menu-toggle {
+    z-index: 51;
+  }
+  
