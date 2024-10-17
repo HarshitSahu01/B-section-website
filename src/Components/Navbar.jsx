@@ -20,10 +20,11 @@ const Navbar = () => {
     { name: "Achievements", path: "/achievements" },
     { name: "Contact Us", path: "/contact" },
     { name: "About", path: "/about" },
+    
   ];
 
   return (
-    <nav className="sticky top-0 z-50 py-4 backdrop-blur-md border-b border-neutral-700/80 bg-gray-900 bg-opacity-80 shadow-lg transition-shadow duration-300">
+    <nav className="py-4  border-b border-neutral-700/80 bg-gray-900 bg-opacity-80 shadow-lg transition-shadow duration-300">
       <div className="container px-4 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           {/* Logo and Brand Name */}

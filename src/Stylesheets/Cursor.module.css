@@ -1,4 +1,3 @@
-/* cursor.module.css */
 .cursorTailAnimation {
   width: 100%;
   height: 100vh;
@@ -6,7 +5,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: 9; /* Keep above other content but below the Navbar */
+  pointer-events: none; /* Allow clicks to pass through */
+  cursor: none;
 }
 
 .circle {
@@ -17,8 +18,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
-  z-index: 2; /* Keep circles above the animation layer but below Navbar and footer */
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 10; /* Above the animation layer but below the Navbar */
+}
+
+.particle {
+  position: fixed;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: orange; /* Blast color */
+  pointer-events: none; /* Allow clicks to pass through */
+  z-index: 10; /* Match with .circle to keep all cursor elements at the same level */
+  opacity: 1;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
 .mobileText {
@@ -29,15 +42,5 @@
   color: white;
   font-size: 1.5rem;
   display: none;
-}
-.particle {
-  position: fixed;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-  background-color: orange; /* Blast color */
-  pointer-events: none;
-  z-index: 10000;
-  opacity: 1;
-  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+  z-index: 8; /* Lower than cursor elements to keep them visible */
 }
