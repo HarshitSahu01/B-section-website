@@ -15,7 +15,6 @@ function App() {
       <Navbar />
       <CursorTrail/>
       <div className="min-h-screen ">
-        <h1 className="text-white">B SECTION WEBSITE</h1>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
