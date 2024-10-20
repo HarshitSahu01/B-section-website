@@ -2,6 +2,7 @@ import { React, useRef } from "react";
 import GG from "../assets/GG.jpg";
 import DT from "../assets/DT.jpg";
 import MS from "../assets/ms.jpg";
+import JNT from "../assets/JNT.jpg";
 import { motion, useScroll } from "framer-motion";
 
 const Creators = () => {
@@ -53,19 +54,21 @@ const Creators = () => {
             </div>
             <div className="crea-1 w-[45vw] h-[20vh] lg:w-[20vw] lg:h-[40vh] rounded-full shadow-md shadow-yellow-200">
               <div className="img-1 lg:w-[20vw] lg:h-[42vh] w-[45vw] h-[21vh] rounded-full shadow-lg shadow-yellow-200 border-t-8 border-t-yellow-300 border-b-8 border-b-orange-300 border-l-4 border-l-yellow-300 border-r-4 border-r-orange-300 ">
-              <img
-  src={MS}
-  alt="ms"
-  className="lg:w-[20vw] lg:h-[40vh] w-[45vw] h-[20vh] rounded-full object-cover shadow-md shadow-yellow-200"
-/>
-
+                <img
+                  src={MS}
+                  alt="ms"
+                  className="lg:w-[20vw] lg:h-[40vh] w-[45vw] h-[20vh] rounded-full object-cover shadow-md shadow-yellow-200"
+                />
               </div>
               {/* <p>Creator 3</p> */}
-              
             </div>
             <div className="crea-1 w-[45vw] h-[20vh] lg:w-[20vw] lg:h-[40vh] rounded-full shadow-md shadow-yellow-200">
               <div className="img-1 lg:w-[20vw] lg:h-[42vh] w-[45vw] h-[21vh] rounded-full shadow-lg shadow-yellow-200 border-t-8 border-t-yellow-300 border-b-8 border-b-orange-300 border-l-4 border-l-yellow-300 border-r-4 border-r-orange-300 ">
-                <img src="" alt="" />
+              <img
+                  src={JNT}
+                  alt="ms"
+                  className="lg:w-[20vw] lg:h-[40vh] w-[45vw] h-[20vh] rounded-full object-cover shadow-md shadow-yellow-200"
+                />
               </div>
               {/* <p>Creator 1</p> */}
             </div>
