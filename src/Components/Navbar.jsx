@@ -17,13 +17,14 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Achievements", path: "/achievements" },
-    { name: "Contact Us", path: "/contact" },
-    { name: "About", path: "/about" },
+    { name: "Achievements", path: "#achievements" },
+    { name: "Contact Us", path: "#contact" },
+    { name: "About", path: "#about" },
+    { name: "Creators", path: "#creators" },
   ];
 
   return (
-    <nav className="py-2 border-b border-neutral-700/80 bg-gray-900 bg-opacity-80 shadow-lg transition-shadow duration-300">
+    <nav className="py-2 border-b border-neutral-700/80 bg-opacity-80 shadow-lg transition-shadow duration-300">
       <div className="container px-6 mx-auto relative lg:text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
@@ -33,11 +34,11 @@ const Navbar = () => {
       
             </Link>
           </div>
-          <ul className="hidden lg:flex ml-14 space-x-8">
+          <ul className="hidden lg:flex ml-14 space-x-8 text-xl">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  to={item.path}
+                <a
+                  href={item.path}
                   onClick={() => closeNavbar(item.path)}
                   className={`flex items-center h-full text-white transition duration-200 ease-in-out transform hover:scale-110 px-4 py-3 rounded-md ${
                     activeItem === item.path
@@ -46,7 +47,7 @@ const Navbar = () => {
                   }`}
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -65,8 +66,8 @@ const Navbar = () => {
             <ul>
               {navItems.map((item) => (
                 <li className="py-4" key={item.name}>
-                  <Link
-                    to={item.path}
+                  <a
+                    href={item.path}
                     onClick={() => closeNavbar(item.path)}
                     className={`text-white ${
                       activeItem === item.path
@@ -75,7 +76,7 @@ const Navbar = () => {
                     }`}
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

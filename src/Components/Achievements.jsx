@@ -30,12 +30,12 @@ const Achievements = () => {
   });
   return (
     <>
-      <section className="min-h-screen mx-auto p-0 m-8">
+      <section id="achievements" className=" mx-auto p-0 m-8">
         <h1 className="achieve-head px-2 py-2 text-center text-4xl font-bold text-yellow-400 shadow-md ">
           Achievements Gallery
         </h1>
 
-        <div className="bento-grid my-12 flex flex-col items-center gap-5">
+        <div className="bento-grid lg:my-12 flex flex-col items-center gap-5">
         <motion.div
           className="bento-grid my-6 min-h-screen flex flex-col justify-center items-center mx-auto gap-12"
           ref={ref}
@@ -153,11 +153,11 @@ const Achievements = () => {
           </motion.div>
         </div>
 
-        <div className="carousel max-w-[124rem] px-4 py-16 mx-auto">
+        <div className="carousel max-w-[124rem] lg:px-4 py-6 lg:py-16 mx-auto">
           <main className="w-full max-w-[2000px] mx-auto">
             <style>{sliderKeyframes}</style>
             <div className="mb-3">
-              <section className="min-h-screen mx-auto">
+              <section className="mx-auto">
                 <div className="crousal w-full px-4 py-5 mx-auto">
                   <main className="w-full mx-auto">
                     <style>{sliderKeyframes}</style>

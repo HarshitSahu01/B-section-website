@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       {/* About Section */}
-      <div className="flex flex-col items-start md:max-w-[60%] mb-8 md:mb-0 w-full mt-8 text-left">
+      <div id='about' className="flex flex-col items-start md:max-w-[60%] mb-8 md:mb-0 w-full mt-8 text-left">
         <h1 className="text-4xl font-bold mb-4 text-yellow-400">ABOUT</h1>
         <p className="text-lg text-white mb-6">
           The B section, considered the highlight, truly embodies the essence of the celebration.
@@ -29,7 +29,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
           >
             <span
-              className="inline-block px-6 py-2 text-black font-bold group-hover:text-yellow-800 transition duration-300 rounded-full bg-yellow-500"
+              className="inline-block cursor-none px-6 py-2 text-black font-bold group-hover:text-yellow-800 transition duration-300 rounded-full bg-yellow-500"
               style={{
                 backgroundImage: `url(${buttonImage})`,
                 backgroundSize: 'cover',

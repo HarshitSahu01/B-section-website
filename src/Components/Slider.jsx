@@ -71,11 +71,11 @@ const Slider = () => {
   });
   return (
     <>
-      <section className="mx-auto flex flex-col justify-center items-center">
+      <section className="mx-auto flex flex-col justify-center items-center mb-24  lg:mb-0">
         <span className="achieve-head w-[25vw] rounded-xl px-2 py-3 text-center flex justify-center items-center text-4xl font-bold text-yellow-400">
           Our Memories
         </span>
-        <div className="w-[90vw] h-[50vh]  mx-auto mt-12 flex justify-center items-center bg-black text-yellow-50 font-medium">
+        <div className="w-[90vw] h-[50vh] lg:h-[50vh]  mx-auto mt-24 lg:mt-14 flex justify-center items-center bg-black text-yellow-50 font-medium">
           <motion.div
             ref={ref}
             style={{
@@ -84,10 +84,10 @@ const Slider = () => {
             }}
             className="flex items-center h-72  rounded-lg"
           >
-            <div className="flex gap-5 px-24 py-2 w-[95vw] items-center justify-center">
+            <div className="flex lg:flex-row flex-col  lg:gap-5 px-12 lg:px-24 py-2 w-[95vw] items-center justify-center">
               <button
                 onClick={goToPrevSlide}
-                className="px-4 py-2 mx-2 text-yellow-400 font-extrabold "
+                className="px-4 py-2 mx-2 text-yellow-400 font-extrabold cursor-none"
               >
                 <lord-icon
                   src="https://cdn.lordicon.com/vduvxizq.json"
@@ -98,12 +98,13 @@ const Slider = () => {
                     height: "250px",
                     transform: "rotate(180deg)",
                   }}
+              
                 ></lord-icon>
               </button>
               <img
                 src={slides[currentIndex].image}
                 alt={`Slide ${slides[currentIndex].id}`}
-                className="flex-1 px-0 items-center justify-center rounded-lg w-[60vw] h-[35vh] lg:w-[70vw] lg:h-[50vh] object-cover shadow-md shadow-yellow-200 transition-all"
+                className="flex-1 px-0 items-center justify-center rounded-lg w-[80vw] h-[35vh] lg:w-[70vw] lg:h-[50vh] object-cover shadow-md shadow-yellow-200 transition-all"
               />
               {/* <div className="flex-1 p-6">
             <h2 className="text-orange-500 text-2xl font-bold">{slides[currentIndex].title}</h2>
@@ -111,7 +112,7 @@ const Slider = () => {
             </div> */}
               <button
                 onClick={goToNextSlide}
-                className="px-4 py-2 mx-2 text-yellow-400 font-extrabold "
+                className="px-4 py-2 mx-2 text-yellow-400 font-extrabold cursor-none"
               >
                 <lord-icon
                   src="https://cdn.lordicon.com/vduvxizq.json"
