@@ -129,7 +129,7 @@ const Achievements = () => {
                   className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2"
                 />
                 <h2 className="text-center font-semibold text-lg text-white">
-                  Numan Siddiqui
+                  Numan Siddiqui : 2nd Position at DNC (Cricket)
                 </h2>
               </div>
             </div>
