@@ -6,15 +6,18 @@ import Navbar from "./Components/Navbar";
 import CursorTrail from "./Components/CursorTrail";
 import Achievements from "./Components/Achievements";
 import ContactUs from "./Components/ContactUs";
-import Creators from "./Components/Creators";
+import Creators from "./Components/Creators"; // Keep the Creators component
 
 function App() {
   return (
     <div className="bg-black">
       <Navbar />
       <CursorTrail />
-      <div className="min-h-screen ">
+      
+      {/* You can choose whether you need a heading or not */}
+      <div className="min-h-screen">
         <h1 className="text-white">B SECTION WEBSITE</h1>
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -22,9 +25,9 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
+
+      {/* Keep Achievements, Creators, and ContactUs components if needed */}
       <Achievements />
-      {/*       
-      <footer className="bg-opacity-80 bg-slate-500 h-[10vh] flex justify-center items-center">Footer hai ye</footer> */}
       <Creators />
       <ContactUs />
     </div>
