@@ -7,14 +7,12 @@ import CursorTrail from "./Components/CursorTrail";
 import Achievements from "./Components/Achievements";
 import ContactUs from "./Components/ContactUs";
 
-
 function App() {
   return (
     <div className="bg-black">
-  
       <Navbar />
-      <CursorTrail/>
-      <div className="min-h-screen ">
+      <CursorTrail />
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -22,7 +20,9 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
-      <footer className="bg-opacity-80 bg-slate-500 h-[10vh] flex justify-center items-center">Footer hai ye</footer>
+      <footer className="bg-opacity-80 bg-slate-500 h-[10vh] flex justify-center items-center">
+        Footer hai ye
+      </footer>
     </div>
   );
 }

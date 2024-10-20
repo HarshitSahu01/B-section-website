@@ -4,6 +4,9 @@ import ach2img from "../assets/axis.png";
 import ach3img from "../assets/BKP.png";
 import ach4img from "../assets/DevHack.jpeg";
 import ach5img from "../assets/HackSphere.jpeg";
+import ach6img from "../assets/num.jpg";
+import ach7img from "../assets/auc.jpg";
+import ach8img from "../assets/auct.jpg";
 
 // Keyframes for animations
 const sliderKeyframes = `
@@ -20,84 +23,123 @@ const sliderKeyframes = `
 const Achievements = () => {
   return (
     <>
-      <section className="mt-32 min-h-screen mx-auto">
-        <span className="achieve-head px-2 py-2 text-center flex justify-center items-center text-4xl font-bold text-yellow-400 shadow-md shadow-yellow-200">
-          Achievements Gallery{" "}
-        </span>
-        <div className="bento-grid my-12 flex flex-col justify-center items-center mx-auto gap-5">
-          <div className="div-1-grid-1 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[40vh] w-[80vw] lg:w-[85vh] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-2"> {/* Tilt to left */}
+      <section className="min-h-screen mx-auto p-0 m-8">
+        <h1 className="achieve-head px-2 py-2 text-center text-4xl font-bold text-yellow-400 shadow-md ">
+          Achievements Gallery
+        </h1>
+
+        <div className="bento-grid my-12 flex flex-col items-center gap-5">
+          {/* Achievement Card 1 */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[40vh] w-[90vw] max-w-[800px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-2">
             <img
               src={ach1img}
-              alt="tt event"
-              className="w-[80%] h-[90%] object-cover -mt-8" // Set width to 80% and crop from top
+              alt="RTMNU University Table Tennis Tournament"
+              className="w-[80%] h-[90%] object-cover -mt-8"
             />
             <h2 className="text-center font-semibold text-lg text-white">
-              Secured 3rd place at the RTMNU University tournament, 2024 in Table Tennis
+              3rd Place at RTMNU University Tournament 2024 (Table Tennis)
             </h2>
-            {/* Display title below the image */}
           </div>
 
-          <div className="block-2 flex justify-center items-center gap-5">
-            <div className="div-2 flex flex-col justify-center gap-5">
-              <div className="grid-2 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
+          <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full">
+            <div className="flex flex-col gap-5">
+              {/* Achievement Card 2 */}
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] lg:h-[50vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-3">
                 <img
                   src={ach2img}
                   alt="Axis Vnit"
-                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2" // Set width to 80%, crop from top, and adjust height
+                  className="w-[80%] h-[90%] object-cover object-top -mt-8 mb-2"
                 />
                 <h2 className="text-center font-semibold text-lg text-white">
-                  Secured 3rd Position  at Axis Vnit 2024
-
+                  3rd Position at Axis Vnit 2024
                 </h2>
               </div>
 
-              <div className="grid-3 bg-white bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
+              {/* Achievement Card 3 */}
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[35vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-3">
                 <img
                   src={ach4img}
                   alt="Qualified Internal Hackathon"
-                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2" // Set width to 80%, crop from top and adjust height
+                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2"
                 />
                 <h2 className="text-center font-semibold text-lg text-white">
-                  Qualified Internal Hackathon
+                  Qualified for Internal Hackathon
                 </h2>
-                {/* Display title below the image */}
               </div>
             </div>
-            <div className="div-3 flex flex-col justify-center gap-5">
-              <div className="grid-4 bg-white bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
+
+            <div className="flex flex-col gap-5">
+              {/* Achievement Card 4 */}
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[35vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:rotate-3">
                 <img
                   src={ach3img}
-                  alt="Harshit Sahu BKP 4.0 Winner"
-                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2" // Set width to 80%, crop from top and adjust height
+                  alt="Harshit Sahu BKP Winner"
+                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2"
                 />
                 <h2 className="text-center font-semibold text-lg text-white">
-                  Harshit Sahu BKP Winner
+                  Harshit Sahu - BKP Winner 4.0
                 </h2>
-                {/* Display title below the image */}
               </div>
-              <div className="grid-5 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
+
+              {/* Achievement Card 5 */}
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] lg:h-[50vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:rotate-3">
                 <img
                   src={ach5img}
-                  alt="Winner of HackSphere"
-                  className="w-[calc(100%+40px)] h-[90%] object-cover -mx-20" // Set width to 100% + margins for cropping, adjust height
+                  alt="HackSphere Winner"
+                  className="w-[calc(100%+40px)] h-[90%] object-cover -mx-20"
                 />
                 <h2 className="text-center font-semibold text-lg text-white">
                   Winner of HackSphere 🏆
                 </h2>
-                {/* Display title below the image */}
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Achievements */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[40vh] w-[90vw] max-w-[800px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-2">
+            <img
+              src={ach7img}
+              alt="Auction Frenzy"
+              className="w-[80%] h-[90%] object-cover -mt-8"
+            />
+            <h2 className="text-center font-semibold text-lg text-white">
+              1st Position at Auction Frenzy
+            </h2>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full">
+            <div className="flex flex-col gap-5">
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[40vh] lg:h-[60vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-3">
+                <img
+                  src={ach8img}
+                  alt="Auction Frenzy"
+                  className="w-[50%] h-[90%] object-cover object-bottom -mt-8 mb-2"
+                />
+                <h2 className="text-center font-semibold text-lg text-white">
+                  1st Position at Auction Frenzy
+                </h2>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5">
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[40vh] lg:h-[60vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:rotate-3">
+                <img
+                  src={ach6img}
+                  alt="Numan Siddiqui"
+                  className="w-[80%] h-[calc(90%-10px)] object-cover -mt-8 mb-2"
+                />
+                <h2 className="text-center font-semibold text-lg text-white">
+                  Numan Siddiqui
+                </h2>
               </div>
             </div>
           </div>
         </div>
-        <div className="crousal max-w-[124rem] px-4 py-16 mx-auto">
+
+        <div className="carousel max-w-[124rem] px-4 py-16 mx-auto">
           <main className="w-full max-w-[1200px] mx-auto">
-            {/* Injecting keyframes */}
             <style>{sliderKeyframes}</style>
-
-            {/* <Crousel images={sliderImages1} width="100px" height="50px" quantity={10} /> */}
-
-            {/* <Crousel images={sliderImages2} reverse width="200px" height="200px" quantity={9} /> */}
-            {/* <Crousel/> */}
+            {/* Carousel placeholder */}
           </main>
         </div>
       </section>
