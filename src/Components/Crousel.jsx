@@ -1,4 +1,3 @@
-
 import { React, useRef } from "react";
 import CR1 from "../assets/cr-1.jpg";
 import CR2 from "../assets/cr-2.jpg";
@@ -9,7 +8,8 @@ import CR6 from "../assets/cr-6.jpg";
 import CR7 from "../assets/cr-7.jpg";
 import CR8 from "../assets/cr-8.jpg";
 import CR9 from "../assets/cr-9.jpg";
-import CR10 from "../assets/cr-10.jpg";
+import CR10 from "../assets/cr-10.jpg";  // Corrected merge conflict
+
 import { motion, useScroll } from "framer-motion";
 
 const Crousel = () => {
@@ -67,9 +67,6 @@ const Crousel = () => {
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
             />
           </div>
-          {/* <div className="item item-5 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
-            <img src={CR1} alt="" className="object-cover w-full h-full"/>
-          </div> */}
         </motion.div>
         <motion.div
           ref={ref}
@@ -86,7 +83,7 @@ const Crousel = () => {
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
             />
           </div>
-          <div className="items items-7 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
+          <div className="items items-7 h-[20vh] lg:-h[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
             <img
               src={CR7}
               alt=""
@@ -94,21 +91,21 @@ const Crousel = () => {
             />
           </div>
           <div className="items items-8 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
-          <img
+            <img
               src={CR8}
               alt=""
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
             />
           </div>
           <div className="items items-9 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
-          <img
+            <img
               src={CR9}
               alt=""
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
             />
           </div>
           <div className="items items-10 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm shadow-slate-100 bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg absolute hover:-translate-y-3 transition-all">
-          <img
+            <img
               src={CR10}
               alt=""
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
