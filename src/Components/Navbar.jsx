@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo2.png";
 import "../Stylesheets/Navbar.module.css";
 
 const Navbar = () => {
@@ -28,10 +28,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <Link to="/" onClick={() => closeNavbar("/")}>
-              <img className="h-10 w-10 mr-3" src={logo} alt="Logo" />
-              {/* <span className="text-white text-xl tracking-tight font-bold">
-                B SECTION
-              </span> */}
+              <img src={logo} alt="Logo" className="h-20 w-auto mx-4" />
+
+      
             </Link>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-8">

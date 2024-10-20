@@ -1,9 +1,10 @@
 import { transform } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
-import Slide1 from "../assets/slide1.jpg";
+import Slide1 from "../assets/slide5.jpg";
 import Slide2 from "../assets/slide2.jpg";
 import Slide3 from "../assets/slide3.jpg";
 import Slide4 from "../assets/slide4.jpg";
+import Slide5 from "../assets/slide1.jpg";
 import { motion, useScroll } from "framer-motion";
 
 const slides = [
@@ -31,6 +32,13 @@ const slides = [
     id: 4,
     image:
       Slide4,
+    title: "Start Your Journey",
+    description: "A brighter future awaits you.",
+  },
+  {
+    id: 5,
+    image:
+      Slide5,
     title: "Start Your Journey",
     description: "A brighter future awaits you.",
   },

@@ -88,3 +88,6 @@ body {
   box-sizing: border-box;
 }
 /* >>>>>>> f33efa5b17f6d4b58a8e76924db624b22992ba7a */
+html {
+  scroll-behavior: smooth;
+}

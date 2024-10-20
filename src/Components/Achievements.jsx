@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import Crousel from "./Crousel";
 import ach1img from "../assets/tabletennis.jpg";
 import ach2img from "../assets/axis.png";
 import ach3img from "../assets/BKP.png";
@@ -9,6 +8,7 @@ import ach6img from "../assets/num.jpg";
 import ach7img from "../assets/auc.jpg";
 import ach8img from "../assets/auct.jpg";
 import { motion, useScroll } from "framer-motion";
+import Crousel from "./Crousel";
 
 // Keyframes for animations
 const sliderKeyframes = `
@@ -28,13 +28,14 @@ const Achievements = () => {
     target: ref,
     offset: ["0 4", "1 1.5"],
   });
-
   return (
-    <div className="mb-3">
-      <section className="mt-32 min-h-screen mx-auto">
-        <span className="achieve-head px-2 py-2 text-center flex justify-center items-center text-4xl font-bold text-yellow-400 shadow-md shadow-yellow-200">
+    <>
+      <section className="min-h-screen mx-auto p-0 m-8">
+        <h1 className="achieve-head px-2 py-2 text-center text-4xl font-bold text-yellow-400 shadow-md ">
           Achievements Gallery
-        </span>
+        </h1>
+
+        <div className="bento-grid my-12 flex flex-col items-center gap-5">
         <motion.div
           className="bento-grid my-6 min-h-screen flex flex-col justify-center items-center mx-auto gap-12"
           ref={ref}
@@ -43,10 +44,12 @@ const Achievements = () => {
             opacity: scrollYProgress,
           }}
         >
-          <div className="div-1-grid-1 bg-black hover:bg-slate-900 hover:opacity-100 opacity-90 bg-opacity-50 backdrop-blur-lg rounded-lg h-[20vh] lg:h-[40vh] w-[80vw] lg:w-[85vh] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-2">
+
+          {/* Achievement Card 1 */}
+          <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[50vh] w-[90vw] max-w-[900px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-2">
             <img
               src={ach1img}
-              alt="tt event"
+              alt="RTMNU University Table Tennis Tournament"
               className="w-[80%] h-[90%] object-cover -mt-8"
             />
             <h2 className="text-center font-semibold text-lg text-white">
@@ -56,6 +59,7 @@ const Achievements = () => {
 
           <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full">
             <div className="flex flex-col gap-5">
+              {/* Achievement Card 2 */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] lg:h-[50vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-3">
                 <img
                   src={ach2img}
@@ -67,6 +71,7 @@ const Achievements = () => {
                 </h2>
               </div>
 
+              {/* Achievement Card 3 */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[35vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-3">
                 <img
                   src={ach4img}
@@ -80,6 +85,7 @@ const Achievements = () => {
             </div>
 
             <div className="flex flex-col gap-5">
+              {/* Achievement Card 4 */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[35vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:rotate-3">
                 <img
                   src={ach3img}
@@ -91,6 +97,7 @@ const Achievements = () => {
                 </h2>
               </div>
 
+              {/* Achievement Card 5 */}
               <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] lg:h-[50vh] w-[90vw] max-w-[400px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:rotate-3">
                 <img
                   src={ach5img}
@@ -104,6 +111,7 @@ const Achievements = () => {
             </div>
           </div>
 
+          {/* Additional Achievements */}
           <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[40vh] w-[90vw] max-w-[800px] flex flex-col items-center justify-center overflow-hidden shadow-md transition-transform duration-300 transform hover:scale-105 hover:-rotate-2">
             <img
               src={ach7img}
@@ -142,16 +150,26 @@ const Achievements = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+          </motion.div>
+        </div>
 
-        <div className="crousal w-full px-4 py-5 mx-auto">
-          <main className="w-full mx-auto">
+        <div className="carousel max-w-[124rem] px-4 py-16 mx-auto">
+          <main className="w-full max-w-[2000px] mx-auto">
             <style>{sliderKeyframes}</style>
-            <Crousel />
+            <div className="mb-3">
+              <section className="min-h-screen mx-auto">
+                <div className="crousal w-full px-4 py-5 mx-auto">
+                  <main className="w-full mx-auto">
+                    <style>{sliderKeyframes}</style>
+                    <Crousel />
+                  </main>
+                </div>
+              </section>
+            </div>
           </main>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 
