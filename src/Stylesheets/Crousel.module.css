@@ -1,0 +1,74 @@
+/* 
+@keyframes scrollLeft {
+  to {
+    left: -100%; 
+  }
+}
+@keyframes scrollRight {
+  to {
+    right: -100%;
+  }
+}
+
+.item {
+  left: 100%;
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item-1 {
+  animation-delay: 0s; 
+}
+
+.item-2 {
+  animation-delay: -6s;
+}
+
+.item-3 {
+  animation-delay: -12s;
+}
+
+.item-4 {
+  animation-delay: -18s;
+}
+
+.item-5 {
+  animation-delay: -24s;
+}
+
+
+.items {
+  right: 100%;
+  animation-name: scrollRight;
+  animation-duration: 30s; 
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+.items-6 {
+  animation-delay: 0s;
+}
+
+.items-7 {
+  animation-delay: -6s;
+}
+
+.items-8 {
+  animation-delay: -12s;
+}
+
+.items-9 {
+  animation-delay: -18s;
+}
+
+.items-10 {
+  animation-delay: -24s; 
+}
+
+.wrapper{
+  width: 50%;
+} */

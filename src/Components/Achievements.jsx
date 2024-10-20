@@ -1,10 +1,12 @@
-import React from "react";
+// import React from "react";
+import Crousel from "./Crousel";
+import React, { useRef } from "react";
 import ach1img from "../assets/tabletennis.jpg";
 import ach2img from "../assets/axis.png";
 import ach3img from "../assets/BKP.png";
 import ach4img from "../assets/DevHack.jpeg";
 import ach5img from "../assets/HackSphere.jpeg";
-
+import { motion, useScroll } from "framer-motion";
 // Keyframes for animations
 const sliderKeyframes = `
   @keyframes autoRun {
@@ -16,30 +18,40 @@ const sliderKeyframes = `
     100% { transform: translateX(100%); }
   }
 `;
-
 const Achievements = () => {
+  const ref = useRef(null);
+  const {scrollYProgress} = useScroll({
+      target: ref,
+      offset: ["0 4", "1 1.5"],
+   });
   return (
-    <>
+    <div
+    className="mb-3"
+    >
       <section className="mt-32 min-h-screen mx-auto">
         <span className="achieve-head px-2 py-2 text-center flex justify-center items-center text-4xl font-bold text-yellow-400 shadow-md shadow-yellow-200">
           Achievements Gallery{" "}
         </span>
-        <div className="bento-grid my-12 flex flex-col justify-center items-center mx-auto gap-5">
-          <div className="div-1-grid-1 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[20vh] lg:h-[40vh] w-[80vw] lg:w-[85vh] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-2"> {/* Tilt to left */}
+        <motion.div className="bento-grid my-6 min-h-screen flex flex-col justify-center items-center mx-auto gap-12"
+            ref = {ref}
+            style={{
+              scale : scrollYProgress,
+              opacity: scrollYProgress,
+            }}>
+          <div className="div-1-grid-1  bg-black hover:bg-slate-900 hover:opacity-100 opacity-90 bg-opacity-50 backdrop-blur-lg rounded-lg h-[20vh] lg:h-[40vh] w-[80vw] lg:w-[85vh] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-2"> 
             <img
               src={ach1img}
               alt="tt event"
-              className="w-[80%] h-[90%] object-cover -mt-8" // Set width to 80% and crop from top
+              className="w-[80%] h-[90%] object-cover -mt-8" 
             />
             <h2 className="text-center font-semibold text-lg text-white">
               Secured 3rd place at the RTMNU University tournament, 2024 in Table Tennis
             </h2>
-            {/* Display title below the image */}
           </div>
 
           <div className="block-2 flex justify-center items-center gap-5">
             <div className="div-2 flex flex-col justify-center gap-5">
-              <div className="grid-2 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
+              <div className="grid-2 bg-black hover:bg-slate-900 hover:opacity-100 opacity-90  bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
                 <img
                   src={ach2img}
                   alt="Axis Vnit"
@@ -51,7 +63,7 @@ const Achievements = () => {
                 </h2>
               </div>
 
-              <div className="grid-3 bg-white bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
+              <div className="grid-3 bg-black hover:bg-slate-900 hover:opacity-100 opacity-90 bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:-rotate-3"> {/* Tilt to left */}
                 <img
                   src={ach4img}
                   alt="Qualified Internal Hackathon"
@@ -64,7 +76,7 @@ const Achievements = () => {
               </div>
             </div>
             <div className="div-3 flex flex-col justify-center gap-5">
-              <div className="grid-4 bg-white bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
+              <div className="grid-4 bg-black hover:bg-slate-900 hover:opacity-100 opacity-90 bg-opacity-10 backdrop-blur-md rounded-lg lg:h-[35vh] lg:w-[20vw] h-[20vh] w-[30vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
                 <img
                   src={ach3img}
                   alt="Harshit Sahu BKP 4.0 Winner"
@@ -75,7 +87,7 @@ const Achievements = () => {
                 </h2>
                 {/* Display title below the image */}
               </div>
-              <div className="grid-5 bg-white bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
+              <div className="grid-5 bg-black hover:bg-slate-900 hover:opacity-100 opacity-90 bg-opacity-10 backdrop-blur-md rounded-lg h-[30vh] w-[30vw] lg:h-[50vh] lg:w-[20vw] flex flex-col items-center justify-center overflow-hidden shadow-[0px_2px_2px_rgba(255,215,0,0.1)] transition-transform duration-300 transform hover:scale-105 hover:rotate-3"> {/* Tilt to right */}
                 <img
                   src={ach5img}
                   alt="Winner of HackSphere"
@@ -88,20 +100,18 @@ const Achievements = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="crousal max-w-[124rem] px-4 py-16 mx-auto">
-          <main className="w-full max-w-[1200px] mx-auto">
-            {/* Injecting keyframes */}
-            <style>{sliderKeyframes}</style>
+        </motion.div>
+        <div className="crousal w-full px-4 py-5 mx-auto ">
+        <main className="w-full mx-auto">
+      {/* Injecting keyframes */}
+      <style>{sliderKeyframes}</style>
+        <Crousel/>
 
-            {/* <Crousel images={sliderImages1} width="100px" height="50px" quantity={10} /> */}
+    </main>
 
-            {/* <Crousel images={sliderImages2} reverse width="200px" height="200px" quantity={9} /> */}
-            {/* <Crousel/> */}
-          </main>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

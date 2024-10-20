@@ -6,14 +6,13 @@ import Navbar from "./Components/Navbar";
 import CursorTrail from "./Components/CursorTrail";
 import Achievements from "./Components/Achievements";
 import ContactUs from "./Components/ContactUs";
-
+import Creators from "./Components/Creators";
 
 function App() {
   return (
     <div className="bg-black">
-  
       <Navbar />
-      <CursorTrail/>
+      <CursorTrail />
       <div className="min-h-screen ">
         <h1 className="text-white">B SECTION WEBSITE</h1>
         <Routes>
@@ -23,7 +22,11 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </div>
-      <footer className="bg-opacity-80 bg-slate-500 h-[10vh] flex justify-center items-center">Footer hai ye</footer>
+      <Achievements />
+      {/*       
+      <footer className="bg-opacity-80 bg-slate-500 h-[10vh] flex justify-center items-center">Footer hai ye</footer> */}
+      <Creators />
+      <ContactUs />
     </div>
   );
 }
