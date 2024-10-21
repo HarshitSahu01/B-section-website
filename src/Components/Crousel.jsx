@@ -61,7 +61,7 @@ const Crousel = () => {
             />
           </div>
           <div className="item item-5 h-[20vh] lg:h-[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
-            <img
+            <img 
               src={CR5}
               alt=""
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
