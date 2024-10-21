@@ -8,7 +8,7 @@ import CR6 from "../assets/cr-6.jpg";
 import CR7 from "../assets/cr-7.jpg";
 import CR8 from "../assets/cr-8.jpg";
 import CR9 from "../assets/cr-9.jpg";
-import CR10 from "../assets/cr-10.jpg";  // Corrected merge conflict
+import CR10 from "../assets/cr-10.jpg";  
 
 import { motion, useScroll } from "framer-motion";
 
@@ -83,7 +83,7 @@ const Crousel = () => {
               className="object-cover w-full h-full shadow-lg shadow-slate-200"
             />
           </div>
-          <div className="items items-7 h-[20vh] lg:-h[30vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
+          <div className="items items-7 h-[30vh] lg:-h[50vh] w-[17vw] lg:w-[13vw] shadow-sm bg-red-500 hover:scale-105 hover:-rotate-1 rounded-lg shadow-slate-100 absolute hover:-translate-y-3 transition-all">
             <img
               src={CR7}
               alt=""
