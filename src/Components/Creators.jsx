@@ -10,13 +10,14 @@ import MA from "../assets/MA.jpg";
 import JT from "../assets/JT.jpg";
 import KS from "../assets/KS.jpg";
 import HM from "../assets/HM.jpg";
-
+import DK from "../assets/DK.jpg"
 // Array of creator details (image and name)
 const creators = [
   { img: DT, name: "Dhruv Tambekar" },
-  { img: GG, name: "GG" },
   { img: MS, name: "Mohd. Shayan" },
   { img: JT, name: "Jyotiraditya Tripathi" },
+  { img: GG, name: "GG" },
+  { img: DK, name: "Devyani Keche" },
   { img: HS, name: "Harshit Sahu" },
   { img: MA, name: "Moli Agarwal" },
   { img: HM, name: "Hassan Mansoori" },
@@ -27,13 +28,13 @@ const Creators = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 0.4", "1 1.5"],
+    offset: ["0 1.7", "1 1.5"],
   });
 
   return (
-    <div ref={ref} className="mt-12 mb-32 mx-44">
+    <div ref={ref} className="mt-0 mb-32 mx-44">
       <section className="flex flex-col justify-center items-center">
-        <span className="achieve-head mb-12 w-[20vw] rounded-xl px-2 py-3 text-center flex justify-center items-center text-4xl font-bold text-yellow-400">
+        <span className="achieve-head mb-0 w-[20vw] rounded-xl px-2 py-3 text-center flex justify-center items-center text-4xl font-bold text-yellow-400">
           Creators
         </span>
 
