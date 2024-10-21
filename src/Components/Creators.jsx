@@ -7,7 +7,7 @@ import DT from "../assets/DT.jpg";
 import MS from "../assets/ms.jpg";
 import HS from "../assets/HS.jpg";
 import MA from "../assets/MA.jpg";
-import JT from "../assets/JT.jpg";
+import JT from "../assets/JNT.jpg";
 import KS from "../assets/KS.jpg";
 import HM from "../assets/HM.jpg";
 import DK from "../assets/DK.jpg"
@@ -33,8 +33,11 @@ const Creators = () => {
 
   return (
     <div ref={ref} className="mt-0 mb-32 mx-44">
-      <section className="flex flex-col justify-center items-center">
-        <span className="achieve-head mb-0 w-[20vw] rounded-xl px-2 py-3 text-center flex justify-center items-center text-4xl font-bold text-yellow-400">
+      <section id="creators" className="flex flex-col justify-center items-center">
+{/* <<<<<<< HEAD */}
+{/* ======= */}
+        <span  className="achieve-head mb-12 w-[20vw] rounded-xl px-2 py-3 text-center flex justify-center items-center text-4xl font-bold text-yellow-400">
+{/* >>>>>>> 2610ece1b01f3138546f2b5b533c93584a51a8f9 */}
           Creators
         </span>
 
